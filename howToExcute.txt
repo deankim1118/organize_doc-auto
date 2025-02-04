@@ -1,0 +1,18 @@
+PyInstaller 사용 방법
+PyInstaller 설치
+터미널(또는 명령 프롬프트)에서 아래 명령어를 실행하여 PyInstaller를 설치하세요.
+    pip install pyinstaller
+
+프로그램 파일 준비
+    예를 들어, Tkinter GUI 프로그램이 포함된 organize_doc-auto.py 파일이 있다고 가정합시다.
+
+독립 실행 파일 생성
+터미널에서 해당 파일이 있는 디렉토리로 이동한 후, 아래 명령어를 실행하세요.
+    pyinstaller --onefile organize_doc-auto.py
+    **--onefile 옵션은 하나의 실행 파일로 만들어 줍니다.
+
+**추가적으로 --noconsole 옵션을 사용하면 콘솔 창 없이 GUI만 실행할 수 있어요.
+    pyinstaller --onefile --noconsole document_sorter.py
+    
+생성된 파일 확인
+명령어 실행 후, dist 폴더 안에 document_sorter.exe (Windows의 경우) 파일이 생성됩니다. 이 파일을 더블클릭하면 Python이 설치되어 있지 않은 환경에서도 프로그램을 실행할 수 있어요.
